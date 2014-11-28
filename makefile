@@ -1,6 +1,5 @@
 a.out:
 	gcc -o cgi/a.cgi cgi/Login.c
-	chmod 700 cgi/a.cgi
 
 clean:
 	rm -f cgi/a.cgi
