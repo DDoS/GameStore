@@ -1,0 +1,68 @@
+#middle{
+    width: 800px;
+    height: 430px;
+    overflow: hidden;
+    color: white;
+}
+
+#title{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+#content{
+    width: 100%;
+    margin-top: 28px;
+}
+
+.block{
+    overflow: hidden;
+    border-radius: 50px;
+    padding: 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 48%;
+    height: 330px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+}
+
+
+#description{
+    float: left;
+}
+
+#sell{
+    float: right;
+}
+
+.block_title{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.block_content{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+#items{
+    margin-top: 0px;
+}
+
+.item{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: white;
+}

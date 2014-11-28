@@ -1,0 +1,148 @@
+#middle{
+    width: 860px;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 30px;
+    -webkit-box-shadow: 0px 0px 70px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 70px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 70px 0px rgba(0,0,0,0.15);
+    background: white;
+}
+
+input{
+    color: black;
+    border: 0;
+    line-height: 44px;
+    height: 44px;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#list{
+    overflow: auto;
+    width: 100%;
+    height: 485px;
+}
+
+.itemContainer{
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.02);
+    float: left;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.preview{
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.itemInfo{
+    float: left;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.item_name{
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.item_level{
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #00aae2;
+
+}
+
+.item_price{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+/*    color: #ffa500;
+*/}
+
+.coin{
+    line-height: 16px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image:url(../images/coin.png);
+    background-position: 0px 2px;
+    background-size: 12px 12px;
+}
+
+.item_description{
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.itemOptions{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    text-indent: 100px;
+}
+
+.buy{
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.quantity{
+    margin-left: 4px;
+    border: 1px solid rgba(0,0,0,0.18);
+    border-radius: 4px;
+    width: 30px;
+    line-height: 16px;
+    height: 16px;
+    font-size: 12px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+#purchase{
+    color: white;
+    background: #ef9f00;
+    border-radius: 10px;
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#purchase:hover{
+    background: #d18700;
+}
+
