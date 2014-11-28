@@ -6,8 +6,9 @@ clean:
 
 publish:
 	rm -rf ~/public_html/*
-	cp -rf public_html/* ~/public_html
+	cp -rf html/* ~/public_html
 	cp -rf cgi ~/public_html
+	cp -rf database ~/public_html
 	# make all files rwxr-xr-x, a bit too permissive but simple
 	chmod -R 755 ~/public_html
 
