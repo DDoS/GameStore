@@ -14,7 +14,7 @@ sub exist(){
 
 # Render error page
 sub displayError(){
-        print "Username is taken. <a href='registration.html'>Try again</a> or go to <a href='index.html'>homepage</a>.\n";
+        print "Username is taken. <a href='../registration.html'>Try again</a> or go to <a href='../index.html'>homepage</a>.\n";
 }
 
 # Display resulting HTML page
