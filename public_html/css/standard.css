@@ -74,11 +74,22 @@ textarea, input{
     color: rgba(255,255,255,0.8);
     background: rgba(0,0,0,0.1);
     height: 40px;
+    margin-left: 10px;
+}
+
+#miniLogo{
+    float: left;
+    background-image: url(../images/logo.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-top: 8px;
+    margin-left: 8px;
+
 }
 
 #topLeft{
     float: left;
-    margin-left: 10px;
     margin-top: 8px;
     font-weight: 400;
 }

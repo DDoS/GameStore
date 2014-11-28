@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Squaree Store</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link rel=stylesheet type="text/css" href="css/standard.css">
+    <link rel=stylesheet type="text/css" href="css/catalogue.css">
+</head>
+<body>
+
+<input type='hidden'/>
+
+<div id='top'>
+    <a href='index.html'>
+        <div id='topLeft' class='link'>Squaree</div>
+        <div id='miniLogo' class='center-cropped'></div>
+    </a>
+    <div id='topRight'>
+
+        <a href='index.html'><div id='register' class='link'>Home</div></a>
+        <div id='verticalSeparator'>|</div>
+        <a href='catalogue.html'><div id='register' class='link'>Catalogue</div></a>
+        <div id='verticalSeparator'>|</div>
+        <a href='login.html'><div id='login' class='link'>Login</div></a>
+        <div id='verticalSeparator'>|</div>
+        <a href='registration.html'><div id='register' class='link'>Register</div></a>
+
+    </div>
+</div>
+
+
+<form id='middle' method='get' action='Purchase.py' class='absolute-center'>
+
+    <div id='list'>
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/chest1.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Vampire Chest</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>You'll be the ultimate Bat-chelor in this slick vampire top! Get the whole vampire outfit and freak out your opponents!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_chest1" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_chest1" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/chest2.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Sparta Warrior Chest</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>A real Roman Warrior needs his armor! This top looks hot with the whole Spartacus Warrior ensemble. Available now!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_chest2" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_chest2" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/chest3.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Pink Cupcake Corn</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Come on over to the Balloono arena, straight from your job as a Cupcake Corner Chef!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_chest3" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_chest3" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/chest4.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Ninja Chest</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Eat, Sleep, Assassinate!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_chest4" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_chest4" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/chest5.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Iron Man Chest</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Powered by the Asgardian Crystal - won't protect you from balloons, but it looks cool!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_chest5" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_chest5" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/hat1.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Chock Nurris Hat</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>With this Chock Nurris hat you can slam revolving doors!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_hat1" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_hat1" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/hat2.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Uncle Sam Hat</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Ask not what your monkey can do for you but what you can do for your monkey! </div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_hat2" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_hat2" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/hat3.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Black Pirate Hat</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>ARRGH! To celebrate Talk Like a Pirate Day (September 19th) we're unlocking this hat (it's usually a level 38 item) till it sells out, so get movin' before someone steals the treasure!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_hat3" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_hat3" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/hat4.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Mumblemore Wizard Hat</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Channel the magic of Mumblemore!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_hat4" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_hat4" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/head1.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Crypt Creeper Hat</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Straight from the coffin and into your game! This creepy mummfied monkey will freak out your opponents! Get the Crypt Creeper top and bottoms too!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_head1" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_head1" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/head2.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Iron Man Head</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>It's the Iron Man, Monkey Style!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_head2" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_head2" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/head3.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Witchpanzee Head</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>The Witchpanzee is wicked sweet!!! Get all the parts and show off in Balloono! </div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_head3" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_head3" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/head4.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Snow Beast Head</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Scare the snow pants off of your opponents with the Snow Beast Balloono monkey!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_head4" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_head4" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/pants2.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Spartan Silver Pants</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Better than a kilt - feel the breeze! Part of the Spartacus/STARtacus sets</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_pants2" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_pants2" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/pants3.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Iron Man Pants</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Heros aren't born. They are built.</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_pants3" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_pants3" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/pants4.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Cupcake Chief Pants</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Come on over to the Balloono arena, straight from your job as a Cupcake Corner Chef!</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_pants4" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_pants4" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/pin.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Pin</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>With this new power up you can use a pin to get out of a jam (e.g. pop your balloon) every match without depleting your coin balance. </div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_pin" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_pin" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/powerup1.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Extra Balloon</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Start with two explosive balloons from the start of game, instead of one, to help defeat your competition. </div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_powerup1" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_powerup1" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/powerup2.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Go Faster</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Get an edge on your competition with a faster character from the start of the game.</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_powerup2" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_powerup2" value='0' class='quantity'/>
+            </div>
+        </div>
+
+        <div class='itemContainer'>
+            <div class='preview center-cropped' style='background-image:url(images/items/powerup3.png)'></div>
+            <div class='itemInfo'>
+                <div class='item_name'>Bigger Explosion</div>
+                <div class='item_price'>Cost: 10 <div class='coin center-cropped'></div></div>
+                <div class='item_level'>Require level 10</div>
+                <div class='item_description'>Get an edge on your competition with a bigger balloon explosion from the start of the game.</div>
+            </div>
+            <div class='itemOptions'>
+                <span>Want item:</span><input type="checkbox" name="buy_powerup3" class='buy'/>
+                <span>Quantity:</span><input type="text" name="quantity_powerup3" value='0' class='quantity'/>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <input type='submit' id='purchase' value='Purchase selected items'/>
+
+
+
+
+
+</form>
+
+<div id='footer'>
+    Copyright © 2014 Squaree Inc. All rights reserved
+</div>
+
+<div id='preload'>
+    <img src='images/entered.png'/>
+</div>
+
+
+<script type="text/javascript" src="js/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="js/catalogue.js"></script>
+</body>
+</html>
