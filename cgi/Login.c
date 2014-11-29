@@ -144,6 +144,9 @@ int main() {
     printf("Content-Type:text/html\n\n");
 
     if (goodPassword) {
+        FILE* loggedIn = fopen("../database/LoggedIn.csv", "a");
+        fprintf(loggedIn, "%s\n", username);
+        fclose(loggedIn);
         printRedirect("../catalogue.html");
     } else {
         printRedirect("../login_error.html");
