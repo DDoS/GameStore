@@ -30,6 +30,46 @@ char* readLine(FILE* file) {
     return line;
 }
 
+void copyStringNoEscape(char* dest, char* source, int n) {
+    int i, j;
+    char c;
+    for (i = 0, j = 0; i < n && (c = source[i]); i++) {
+        if (c != '\\') {
+            dest[j++] = c;
+        }
+    }
+}
+
+int parseElements(char* line, char** elements, int n) {
+    int i = 0, j = 0, start = 0;
+    char c, escaped = 0;
+    while (1) {
+        c = line[i];
+        if (c == '\\') {
+            escaped = 1;
+        } else if (c == ',' && !escaped || !c) {
+            int size = i - start;
+            elements[j] = (char*) calloc(size + 1, sizeof(char));
+            copyStringNoEscape(elements[j], line + start * sizeof(char), size);
+            elements[j][size] = '\0';
+            if (++j >= n || !c) {
+                break;
+            }
+            start = i + 1;
+        } else {
+            escaped = 0;
+        }
+        i++;
+    }
+
+    int k;
+    for (k = j; k < n; k++) {
+        elements[k] = NULL;
+    }
+
+    return j;
+}
+
 void getExistingUserPassword(char* name, char* pass, int n) {
     FILE* members = fopen("../database/Members.csv", "r");
 
@@ -39,7 +79,13 @@ void getExistingUserPassword(char* name, char* pass, int n) {
         if (!line) {
             break;
         }
+        char* elements[3];
+        parseElements(line, elements, 3);
+        printf("%s %s %s\n", elements[0], elements[1], elements[2]);
         free(line);
+        free(elements[0]);
+        free(elements[1]);
+        free(elements[2]);
     }
 
     fclose(members);
