@@ -28,7 +28,7 @@ input{
 }
 
 .itemContainer{
-    width: 400px;
+    width: 395px;
     height: 230px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -52,6 +52,20 @@ input{
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
+    position: relative;
+}
+
+.itemDesc{
+    background: rgba(0,0,0,1);
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    direction:rtl;
+    text-indent: 10px;
 }
 
 .itemInfo{
