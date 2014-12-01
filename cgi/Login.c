@@ -70,18 +70,24 @@ int parseElements(char* line, char** elements, int n) {
     return j;
 }
 
-void getExistingUserPassword(char* name, char* pass, int n) {
+char validatePassword(char* name, char* pass) {
     FILE* members = fopen("../database/Members.csv", "r");
 
     char* line;
-    while (1) {
+    char valid = 0;
+    while (!valid) {
         line = readLine(members);
         if (!line) {
             break;
         }
+
         char* elements[3];
         parseElements(line, elements, 3);
-        printf("%s %s %s\n", elements[0], elements[1], elements[2]);
+
+        if (strcmp(elements[1], name) == 0) {
+            valid = strcmp(elements[2], pass) == 0;
+        }
+
         free(line);
         free(elements[0]);
         free(elements[1]);
@@ -89,6 +95,8 @@ void getExistingUserPassword(char* name, char* pass, int n) {
     }
 
     fclose(members);
+
+    return valid;
 }
 
 void getUserInfo(char* input, char* name, char* pass, int n) {
@@ -101,6 +109,17 @@ void getUserInfo(char* input, char* name, char* pass, int n) {
     token = strtok(NULL, "=");
     token = strtok(NULL, "&");
     strncpy(pass, token, n);
+}
+
+void copyFile(FILE* from, FILE* to) {
+    int c;
+    while ((c = fgetc(from)) != EOF) {
+        fputc(c, to);
+    }
+}
+
+void printRedirect(char* file) {
+    printf("<html>\n<head>\n<meta http-equiv=\"REFRESH\"\ncontent=\"0;url=%s\">\n</head>\n</html>\n", file);
 }
 
 int main() {
@@ -117,20 +136,24 @@ int main() {
     }
     content[i] = '\0';
 
-    printf("Content-Type: text/plain;charset=us-ascii\n\n");
-
     char username[201];
     char password[201];
-
     getUserInfo(content, username, password, 201);
+    char goodPassword = validatePassword(username, password);
 
-    printf("username: %s, password: %s\n", username, password);
+    printf("Content-Type:text/html\n\n");
 
-    getExistingUserPassword(NULL, NULL, 0);
+    if (goodPassword) {
+        FILE* loggedIn = fopen("../database/LoggedIn.csv", "a");
+        fprintf(loggedIn, "%s\n", username);
+        fclose(loggedIn);
+        printRedirect("../catalogue.html");
+    } else {
+        printRedirect("../login_error.html");
+    }
 
     free(content);
 
-    printf("Done!\n");
     fflush(stdout);
 
     return EXIT_SUCCESS;
