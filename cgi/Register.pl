@@ -1,4 +1,5 @@
 #!/usr/bin/perl -wT
+
 use strict;
 use CGI ':standard';
 
@@ -9,7 +10,19 @@ my $password = param('password');
 
 # Check if username already exists
 sub exist(){
-    return 0;
+	open(users, "<../database/Members.csv");
+	my @lines = <users>;
+	close(users);
+	foreach my $line (@lines)
+	{
+		chomp($line);
+		my @tmp = split(',', $line);
+		if($tmp[1] eq $username)
+		{
+			return 1;
+		}
+	}	
+	return 0;
 }
 
 # Render error page
