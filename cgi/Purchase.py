@@ -82,7 +82,7 @@ def purchase():
 		"""	
 	inventory_file = open("../database/Inventory.csv", 'w')
 	for i in range (0, 6):
-		inventory_file.write(item_name[i]+','+str(item_quantity[i]-buying[i])+','+str(item_price[i]))
+		inventory_file.write(item_name[i]+','+str(item_price[i])+','+str(item_quantity[i]-buying[i])+"\n") 
 	inventory_file.close()
 if form.has_key("username"):
 	user = form["username"].value
