@@ -7,7 +7,7 @@ cgitb.enable()
 form = cgi.FieldStorage()
 def checkLogged(username):
 	try:
-		loggedin = open("../database/LoggedIn.csv", 'r')
+		loggedin = open("database/LoggedIn.csv", 'r')
 		users = loggedin.read()
 		loggedin.close()
 		users = users.rstrip()
@@ -29,7 +29,7 @@ def notLogged():
 		<body>
 		You are not logged in, please do not try to scam the system
 		<br>
-		<a href='../catalogue.html'>Get back to the catalogue</a>
+		<a href='catalogue.html'>Get back to the catalogue</a>
 		</body>
 		</html>
 		"""	
@@ -46,7 +46,7 @@ def purchase():
 	item_price = [0]*6
 	item_quantity = [0]*6
 	buying = [0]*6
-	inventory_file = open("../database/Inventory.csv", 'r')
+	inventory_file = open("database/Inventory.csv", 'r')
 	invent = inventory_file.readlines()
 	for i in range(0, len(invent)):
 		item_name[i] = invent[i].split(',')[0]
@@ -74,13 +74,13 @@ def purchase():
 		total += buying[i]*item_price[i]
 		print "Item: " + item_name[i] + " Quantity: " + str(buying[i]) + " Price: " + str(buying[i]*item_price[i]) + "<br>"
 	print "Total: " + str(total) + "<br>"
-	print "<a href='../catalogue.html'>Get back to the catalogue</a> <br>"
-	print "<a href='../index.html'>Home Page</a> <br>"
+	print "<a href='catalogue.html'>Get back to the catalogue</a> <br>"
+	print "<a href='index.html'>Home Page</a> <br>"
 	print """
 		</body>
 		</html>
 		"""	
-	inventory_file = open("../database/Inventory.csv", 'w')
+	inventory_file = open("database/Inventory.csv", 'w')
 	for i in range (0, 6):
 		inventory_file.write(item_name[i]+','+str(item_price[i])+','+str(item_quantity[i]-buying[i])+"\n") 
 	inventory_file.close()

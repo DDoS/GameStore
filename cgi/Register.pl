@@ -10,7 +10,7 @@ my $password = param('password');
 
 # Check if username already exists
 sub exist(){
-	open(users, "<../database/Members.csv");
+	open(users, "<database/Members.csv");
 	my @lines = <users>;
 	close(users);
 	foreach my $line (@lines)
@@ -27,12 +27,12 @@ sub exist(){
 
 # Render error page
 sub error(){
-    print "Username is taken. <a href='../registration.html'>Try again</a> or go to <a href='../index.html'>homepage</a>.\n";
+    print "Username is taken. <a href='registration.html'>Try again</a> or go to <a href='index.html'>homepage</a>.\n";
 }
 
 # Render success page
 sub success(){
-    print "Account succesfully created, <a href='../login.html'>sign in</a> now!\n";
+    print "Account succesfully created, <a href='login.html'>sign in</a> now!\n";
 }
 
 # Display resulting HTML page

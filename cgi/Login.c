@@ -71,7 +71,7 @@ int parseElements(char* line, char** elements, int n) {
 }
 
 char validatePassword(char* name, char* pass) {
-    FILE* members = fopen("../database/Members.csv", "r");
+    FILE* members = fopen("database/Members.csv", "r");
 
     char* line;
     char valid = 0;
@@ -144,12 +144,12 @@ int main() {
     printf("Content-Type:text/html\n\n");
 
     if (goodPassword) {
-        FILE* loggedIn = fopen("../database/LoggedIn.csv", "a");
+        FILE* loggedIn = fopen("database/LoggedIn.csv", "a");
         fprintf(loggedIn, "%s\n", username);
         fclose(loggedIn);
-        printRedirect("../catalogue.html");
+        printRedirect("catalogue.html");
     } else {
-        printRedirect("../login_error.html");
+        printRedirect("login_error.html");
     }
 
     free(content);
