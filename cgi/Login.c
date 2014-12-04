@@ -2,6 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 
+void writeCSVRow(FILE* file, char** entries, int n) {
+    fputc('\n', file);
+
+    int i;
+    for (i = 0; i < n; i++) {
+        char* entry = entries[i];
+
+        char c;
+        while (c = *(entry++)) {
+            if (c == ',') {
+                fputc('\\', file);
+            }
+            fputc(c, file);
+        }
+
+        if (i < n - 1) {
+            fputc(',', file);
+        }
+    }
+}
+
 char* readLine(FILE* file) {
     int current = ftell(file);
     int n = 0;
@@ -111,10 +132,26 @@ void getUserInfo(char* input, char* name, char* pass, int n) {
     strncpy(pass, token, n);
 }
 
-void copyFile(FILE* from, FILE* to) {
+void copyWithInject(FILE* from, FILE* to, char* match, char* inject) {
     int c;
+    int n = strlen(match), i = 0;
     while ((c = fgetc(from)) != EOF) {
+
+        if (c == match[i]) {
+            i++;
+        } else {
+            i = 0;
+        }
+
         fputc(c, to);
+
+        if (i == n) {
+            char* injectPointer = inject;
+            while (c = *(injectPointer++)) {
+                fputc(c, to);
+            }
+            i = 0;
+        }
     }
 }
 
@@ -145,9 +182,15 @@ int main() {
 
     if (goodPassword) {
         FILE* loggedIn = fopen("database/LoggedIn.csv", "a");
-        fprintf(loggedIn, "%s\n", username);
+        char* usernamePointer = username;
+        writeCSVRow(loggedIn, &usernamePointer, 1);
         fclose(loggedIn);
-        printRedirect("catalogue.html");
+        FILE* catalogue = fopen("catalogue.html", "r");
+        char* injectFormat = "<input type='hidden' name='username' value=\"%s\"/>";
+        char inject[260];
+        sprintf(inject, injectFormat, username);
+        copyWithInject(catalogue, stdout, "<!--INPUT_USERNAME-->", inject);
+        fclose(catalogue);
     } else {
         printRedirect("login_error.html");
     }
