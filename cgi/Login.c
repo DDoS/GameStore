@@ -122,14 +122,23 @@ char validatePassword(char* name, char* pass) {
 
 void getUserInfo(char* input, char* name, char* pass, int n) {
     char* token;
+    int last;
 
     token = strtok(input, "=");
-    token = strtok(NULL, "&");
+    token = strtok(NULL, "\n");
     strncpy(name, token, n);
+    last = strlen(name) - 1;
+    if (name[last] == '\r') {
+        name[last] = '\0';
+    }
 
     token = strtok(NULL, "=");
-    token = strtok(NULL, "&");
+    token = strtok(NULL, "\n");
     strncpy(pass, token, n);
+    last = strlen(pass) - 1;
+    if (pass[last] == '\r') {
+        pass[last] = '\0';
+    }
 }
 
 void copyWithInject(FILE* from, FILE* to, char* match, char* inject) {
