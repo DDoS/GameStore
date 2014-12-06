@@ -10,8 +10,7 @@ def checkLogged(username):
 		loggedin = open("database/LoggedIn.csv", 'r')
 		users = loggedin.read()
 		loggedin.close()
-		users = users.rstrip()
-		users = users.split(',')
+		users = users.split('\n')
 		for usr in users:
 		#	print "%s + %s" % (username, usr)		
 			if username == usr:
@@ -91,6 +90,4 @@ if form.has_key("username"):
 	else:
 		notLogged()
 else:
-	print "Content-Type: text/plain"
-	print
-	print "Error: username variable not found"
+	notLogged()
