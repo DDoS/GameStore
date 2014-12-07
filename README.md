@@ -1,9 +1,6 @@
 # Simple, clean, cute online store that sells in-game items
 > Made in Perl, C, Python and HTML running on Apache server
 
-# Todo:
-- For Shao Kun: There's a exist() function inside Register.pl script that needs to talk to database in order to check if user is already registered. Finish this part.
-
 # Building and publishing
 
 Clone this repo to your McGill CS account and setup and empty public_html folder following the instructions provided by McGill. Then in the root of the project, run
