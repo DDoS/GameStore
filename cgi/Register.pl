@@ -12,7 +12,7 @@ my $password = param('password');
 sub exist(){
 	open(users, "<database/Members.csv");
 	my @lines = <users>;
-	close(users);
+	close users;
 	foreach my $line (@lines)
 	{
 		chomp($line);
@@ -22,6 +22,10 @@ sub exist(){
 			return 1;
 		}
 	}	
+	my $user_info = "$fullname,$username,$password\n";
+	open(users, ">>database/Members.csv");
+	print users $user_info;
+	close users;
 	return 0;
 }
 
