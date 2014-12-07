@@ -1,7 +1,10 @@
 # Simple, clean, cute online store that sells in-game items
 > Made in Perl, C, Python and HTML running on Apache server
 
-# Building and publishing
+# (For Ready-to-go) Building and publishing
+Clone this repo, unzip the gamestore.zip inside it, the public_html folder inside it contains all the files of the website.
+
+# (For development-fridendly) Building and publishing
 
 Clone this repo to your McGill CS account and setup and empty public_html folder following the instructions provided by McGill. Then in the root of the project, run
 
