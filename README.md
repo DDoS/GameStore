@@ -32,7 +32,7 @@ Team name: 江湖
 0.0.1
 
 ### License
-MIT
+[MIT](LICENSE.txt)
 
 [here]: http://www.cs.mcgill.ca/~szhang74
 [jack zhang]: https://github.com/JackZProduction
